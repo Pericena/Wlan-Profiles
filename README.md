@@ -5,8 +5,7 @@ Es muy fácil saber la contraseña de la red WiFi a la que estás conectado en W
 Si ya te has conectado con tu PC o portátil Windows a una red con contraseña, y ahora quieres conectar 
 también tu smartphone o alguien te pregunta la clave y no la recuerdas, es muy fácil “recuperarla” desde tu ordenador.
 ![](https://3.bp.blogspot.com/-oPb9wuB5nUk/WjRqB56LuCI/AAAAAAAAI3A/wonBBPq85QEbBQmgxkGoWDTxBNlMa6_mwCLcBGAs/s200/lpericena%2Bwifi.png)
-https://www.lpericena.tk/2019/03/importar-perfiles-wlan-con-powershell.html
-
+https://lpericena.blogspot.com/2019/03/importar-perfiles-wlan-con-powershell.html
 ```
 (netsh wlan show profiles) | Select-String “\:(.+)$” | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name=”$name” key=
 clear)}>>wifi.txt
@@ -29,7 +28,7 @@ gcm -Noun netadapter | select name, modulename
 - Utilizando netsh.
 netsh wlan show networks mode=bssid
 
-
+- https://lpericena.blogspot.com/2019/03/importar-perfiles-wlan-con-powershell.html
 
 Sigueme en las redes Sociales:
 - 🌎Blogger          https://lpericena.blogspot.com/
